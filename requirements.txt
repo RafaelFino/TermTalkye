@@ -1,0 +1,5 @@
+pytermtk
+setuptools
+python-ulid
+requests
+cryptography
