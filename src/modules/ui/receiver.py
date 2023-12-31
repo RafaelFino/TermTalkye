@@ -14,7 +14,7 @@ class Receiver:
 #        self.chat.setAlignment(ttk.TTkK.Alignment.CENTER_ALIGN)
         self.chat.setColor(ttk.TTkColor.fg('#FFFF00') | ttk.TTkColor.bg('#2222AA'))
 
-        self.rcv = ttk.TTkTextEdit(parent=self.pnl, lineNumber=False, pos=(0,1), size=(Config.Size.columns - Config.SIDEBAR_WIDTH, Config.RECEIVER_HEIGHT), multiline=True)
+        self.rcv = ttk.TTkTextEdit(parent=self.pnl, lineNumber=False, pos=(0,2), size=(Config.Size.columns - Config.SIDEBAR_WIDTH, Config.RECEIVER_HEIGHT), multiline=True)
         self.rcv.setColor(ttk.TTkColor.fg('#FFFF00'))
         self.pnl.addWidget(self.rcv)
         self.rcv.setReadOnly(True)
