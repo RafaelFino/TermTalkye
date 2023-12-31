@@ -14,13 +14,13 @@ class Manager:
         self.root = ttk.TTk(size=(Config.Size.columns, Config.Size.lines), title="Talkye", border=True, mouseTracking=True, debug=True)
            
         self.title = Title(self.root)
-        self.title.create()
-
-        self.sidebar = Sidebar(self.root)
-        self.sidebar.create()   
+        self.title.create()        
 
         self.receiver = Receiver(self.root)
         self.receiver.create()
+
+        self.sidebar = Sidebar(self.root, self.receiver.setChatText)
+        self.sidebar.create()           
 
         self.footer = Footer(self.root)
         self.footer.create()
