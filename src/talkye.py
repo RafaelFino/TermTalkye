@@ -1,8 +1,5 @@
-import sys
-import TermTk as ttk
-from modules.ui.login import Login
+#!/bin/python3
+from modules.ui.manager import Manager
 
-root = ttk.TTk()
-
-l = Login(root)
-l.show()
+manager = Manager()
+manager.init()
