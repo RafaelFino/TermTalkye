@@ -8,13 +8,13 @@ class Receiver:
         self.root = root
 
     def create(self):
-        self.pnl = ttk.TTkContainer(parent=self.root, pos=(Config.SIDEBAR_WIDTH, 1), size=(Config.Size.columns - Config.SIDEBAR_WIDTH -1, Config.RECEIVER_HEIGHT), border=True)  
+        self.pnl = ttk.TTkContainer(parent=self.root, pos=(Config.SIDEBAR_WIDTH, 1), size=(Config.Size.columns - Config.SIDEBAR_WIDTH, Config.RECEIVER_HEIGHT), border=True)  
 
-        self.chat = ttk.TTkLabel(parent=self.pnl, pos=(0, 0), size=(Config.Size.columns - Config.SIDEBAR_WIDTH - 1, 2), border=True, text="", titleColor=ttk.TTkColor.BOLD) 
+        self.chat = ttk.TTkLabel(parent=self.pnl, pos=(0, 0), size=(Config.Size.columns - Config.SIDEBAR_WIDTH, 2), border=True, text="", titleColor=ttk.TTkColor.BOLD) 
 #        self.chat.setAlignment(ttk.TTkK.Alignment.CENTER_ALIGN)
         self.chat.setColor(ttk.TTkColor.fg('#FFFF00') | ttk.TTkColor.bg('#2222AA'))
 
-        self.rcv = ttk.TTkTextEdit(parent=self.pnl, lineNumber=False, pos=(0,2), size=(Config.Size.columns - Config.SIDEBAR_WIDTH - 1, Config.RECEIVER_HEIGHT), multiline=True)
+        self.rcv = ttk.TTkTextEdit(parent=self.pnl, lineNumber=False, pos=(0,1), size=(Config.Size.columns - Config.SIDEBAR_WIDTH, Config.RECEIVER_HEIGHT), multiline=True)
         self.rcv.setColor(ttk.TTkColor.fg('#FFFF00'))
         self.pnl.addWidget(self.rcv)
         self.rcv.setReadOnly(True)
