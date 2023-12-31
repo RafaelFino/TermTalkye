@@ -5,6 +5,7 @@ from modules.ui.title import Title
 from modules.ui.footer import Footer
 from modules.ui.tabs import Tabs
 from modules.ui.receiver import Receiver
+from modules.ui.sidebar import Sidebar
 class Manager:
     def __init__(self) -> None:
         ttk.TTkLog.use_default_file_logging()   
@@ -14,6 +15,9 @@ class Manager:
            
         self.title = Title(self.root)
         self.title.create()
+
+        self.sidebar = Sidebar(self.root)
+        self.sidebar.create()   
 
         self.receiver = Receiver(self.root)
         self.receiver.create()

@@ -8,9 +8,9 @@ class Receiver:
         self.root = root
 
     def create(self):
-        self.pnl = ttk.TTkContainer(parent=self.root, pos=(0, 1), size=(Config.Size.columns, Config.RECEIVER_HEIGHT), border=True)  
+        self.pnl = ttk.TTkContainer(parent=self.root, pos=(Config.SIDEBAR_WIDTH, 1), size=(Config.Size.columns - Config.SIDEBAR_WIDTH -1, Config.RECEIVER_HEIGHT), border=True)  
 
-        self.rcv = ttk.TTkTextEdit(parent=self.pnl, lineNumber=False, pos=(0,0), size=(Config.Size.columns, Config.RECEIVER_HEIGHT), multiline=True)
+        self.rcv = ttk.TTkTextEdit(parent=self.pnl, lineNumber=False, pos=(0,0), size=(Config.Size.columns - Config.SIDEBAR_WIDTH - 1, Config.RECEIVER_HEIGHT), multiline=True)
         self.rcv.setColor(ttk.TTkColor.fg('#FFFF00'))
         self.pnl.addWidget(self.rcv)
         self.rcv.setReadOnly(True)
