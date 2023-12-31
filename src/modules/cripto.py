@@ -11,18 +11,4 @@ class Crypto:
 
     def decrypt(self, message: str) -> str:
         m = message.encode('ascii')
-        return self.cipher.decrypt(m,).decode('ascii')        
-
-
-## Test:
-#c = Crypto("123")
-#
-#input = "Test"
-#encrypted = c.encrypt(input)
-#
-#print("Input: ", input)
-#print("Encrypted: ", encrypted)
-#
-#decrypted = c.decrypt(encrypted)
-#print("Decrypted: ", decrypted)
-
+        return self.cipher.decrypt(m,).decode('ascii')
