@@ -31,7 +31,7 @@ class Tabs:
 
         btnSend.clicked.connect(lambda: self.sendText())
 
-        self.tab.addTab(pnl, "Messages")
+        self.tab.addTab(pnl, "Send message")
 
     def __createLoginTab(self):
         pnl = ttk.TTkContainer(parent=self.tab, pos=(0, 0), size=(Config.Size.columns, Config.PNL_MAIN_HEIGHT), border=True)  
@@ -50,7 +50,7 @@ class Tabs:
 
     def __createLogViewTab(self):        
         pnl = ttk.TTkLogViewer(parent=self.tab, pos=(Config.Size.columns - 18, 0), size=(Config.Size.columns, Config.PNL_MAIN_HEIGHT), border=True)
-        self.tab.addTab(pnl, "Log")
+        self.tab.addTab(pnl, "Log Viewer")
 
     
     def sendText(self):

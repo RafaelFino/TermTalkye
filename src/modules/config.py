@@ -1,7 +1,7 @@
 import os
 
 class Config:
-    BUTTON_WIDTH = 18
+    BUTTON_WIDTH = 25
     BUTTON_HEIGHT = 1
     BUTTON_SIZE = (int(BUTTON_WIDTH), int(BUTTON_HEIGHT))
     PNL_MAIN_HEIGHT = 8 

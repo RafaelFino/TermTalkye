@@ -17,7 +17,7 @@ class Receiver:
 
     def append(self, user: str, text: str):
         dt = datetime.now().strftime("%G/%m/%d %H:%M:%S")        
-        input = ttk.TTkString(text=f"{dt} [{user}]:", color=ttk.TTkColor.fg('#FFFF00') | ttk.TTkColor.BOLD) + ttk.TTkString(text=f" {text}", color=ttk.TTkColor.fg('#FFFFFF'))
+        input = ttk.TTkString(text=f"{dt} [{user}]:", color=ttk.TTkColor.fg('#FFFF00') | ttk.TTkColor.BOLD) + ttk.TTkString(text=f"\n> {text}", color=ttk.TTkColor.fg('#FFFFFF'))
         self.rcv.append(input)        
         
         

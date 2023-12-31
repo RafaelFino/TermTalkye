@@ -7,6 +7,9 @@ class Footer:
         self.root = root
 
     def create(self):
-        footer = ttk.TTkLabel(parent=self.root, pos=(0, Config.Size.lines-1), size=(Config.Size.columns, 2), border=True, text="", titleColor=ttk.TTkColor.BOLD) 
-        footer.setColor(ttk.TTkColor.fg('#FFFAFA'))
-        footer.setColor(ttk.TTkColor.bg('#AAAAAA'))
+        self.footer = ttk.TTkLabel(parent=self.root, pos=(0, Config.Size.lines-1), size=(Config.Size.columns, 2), border=True, text="", titleColor=ttk.TTkColor.BOLD) 
+        self.footer.setAlignment(ttk.TTkK.Alignment.CENTER_ALIGN)
+        self.footer.setColor(ttk.TTkColor.fg('#000000') | ttk.TTkColor.bg('#AAAAAA'))
+
+    def setText(self, text: str):
+        self.footer.setText(text)        

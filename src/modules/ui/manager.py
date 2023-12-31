@@ -19,7 +19,8 @@ class Manager:
         self.receiver.create()
 
         self.footer = Footer(self.root)
-        self.footer.create() 
+        self.footer.create()
+        self.footer.setText("NOT LOGGED!") 
 
         self.tabs = Tabs(self.root)    
         self.tabs.createMainTabs(self.callSend)   
