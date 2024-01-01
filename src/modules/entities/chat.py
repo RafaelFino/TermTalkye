@@ -6,3 +6,9 @@ class Chat:
 
     def receive(self) -> None:
         return
+    
+    def send(self) -> bool:
+        return
+    
+    def update(self) -> bool:
+        return
