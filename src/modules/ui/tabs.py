@@ -39,6 +39,6 @@ class Tabs:
     
     def sendText(self):
         msg = self.te.toPlainText()
-        for i in range(0, 57):
-            self.sendTextCallback(msg + str(i))        
-        self.te.setText("")        
+        self.sendTextCallback(msg)
+        self.te.setText("")
+        self.te.setFocus()          
